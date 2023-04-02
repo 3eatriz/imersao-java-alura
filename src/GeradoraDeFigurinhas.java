@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 
 public class GeradoraDeFigurinhas {
  
-    public void cria(InputStream inputStream, String nomeArquivo, String texto, InputStream inputStremSobreposicao) throws Exception{
+    public void cria(InputStream inputStream, String nomeArquivo, String texto /*,InputStream inputStremSobreposicao*/) throws Exception{
 
         //leitura da imagem
         //InputStream inputStream = new URL("https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies_1.jpg").openStream();
@@ -36,9 +36,9 @@ public class GeradoraDeFigurinhas {
         Graphics2D graphics = (Graphics2D) novaImagem.getGraphics();
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
-        BufferedImage imagemSobreposicao = ImageIO.read(inputStremSobreposicao);
-        int posicaoImagemSobreposicaoY = novaAltura - imagemSobreposicao.getHeight();
-        graphics.drawImage(imagemSobreposicao, 0, posicaoImagemSobreposicaoY, null);
+        // BufferedImage imagemSobreposicao = ImageIO.read(inputStremSobreposicao);
+        // int posicaoImagemSobreposicaoY = novaAltura - imagemSobreposicao.getHeight();
+        // graphics.drawImage(imagemSobreposicao, 0, posicaoImagemSobreposicaoY, null);
         
         //configurar a fonte
         
